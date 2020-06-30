@@ -17,8 +17,10 @@ app.on('ready', function () {
 	win = new BrowserWindow({
 		width: store.get('width'),
 		height: store.get('height'),
+		x: store.get('x'),
+		y: store.get('y'),
 		frame: false,
-		backgroundColor: '#FFF',
+		backgroundColor: '#000',
 		webPreferences: {
 			nodeIntegration: true
 		}
@@ -36,6 +38,12 @@ app.on('ready', function () {
 		let { width, height } = win.getBounds();
 		store.set('width', width);
 		store.set('height', height);
+	});
+
+	win.on('move', () => {
+		let { x, y } = win.getBounds();
+		store.set('x', x);
+		store.set('y', y);
 	});
 
 });
