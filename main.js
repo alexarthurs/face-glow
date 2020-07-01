@@ -22,12 +22,13 @@ app.on('ready', function () {
 		frame: false,
 		backgroundColor: '#000',
 		webPreferences: {
-			nodeIntegration: true
+			nodeIntegration: true,
+			devTools: false
 		}
 	});
 
 	// Specify entry point to default entry point of vue.js
-	win.loadURL('http://localhost:8080');
+	win.loadURL('http://localhost:8686');
 
 	// Remove window once app is closed
 	win.on('closed', function () {

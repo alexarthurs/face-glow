@@ -17,6 +17,9 @@ export default {
 	},
 	watch: {
 		color: function() {
+			if(!this.color.hex8)
+				return;
+				
 			document.body.style.backgroundColor = this.color.hex8;
 			this.store.set('color', this.color.hex8);
 		}
