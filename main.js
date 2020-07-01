@@ -1,5 +1,7 @@
 // ./main.js
 const { app, BrowserWindow } = require('electron')
+const nativeImage = require('electron').nativeImage;
+const image = nativeImage.createFromPath(__dirname + '/static/icon.jpg'); 
 const Store = require('electron-store');
 const store = new Store({
 	defaults: {
@@ -24,7 +26,8 @@ app.on('ready', function () {
 		webPreferences: {
 			nodeIntegration: true,
 			devTools: false
-		}
+		},
+		icon: image
 	});
 
 	// Specify entry point to default entry point of vue.js
