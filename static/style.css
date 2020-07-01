@@ -72,6 +72,7 @@ body {
   overflow: hidden;
   font-family: "Segoe UI", sans-serif;
   font-size: 12px;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.4);
 }
 
 .maximized #window-title {
@@ -92,6 +93,7 @@ body {
   top: 0;
   right: 0;
   height: 100%;
+  background-color: #00000020
 }
 
 #window-controls {
