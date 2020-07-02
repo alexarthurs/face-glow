@@ -103,6 +103,6 @@ Project Link: [https://github.com/alexarthurs/monitor-key-light](https://github.
 [issues-shield]: https://img.shields.io/github/issues/alexarthurs/monitor-key-light.svg?style=flat-square
 [issues-url]: https://github.com/alexarthurs/monitor-key-light/issues
 [license-shield]: https://img.shields.io/github/license/alexarthurs/monitor-key-light.svg?style=flat-square
-[license-url]: https://github.com/alexarthurs/monitor-key-light/blob/master/LICENSE
+[license-url]: https://github.com/alexarthurs/monitor-key-light/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/alex-arthurs-73998660/
