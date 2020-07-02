@@ -3,11 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<% if (htmlWebpackPlugin.options.nodeModules) { %>
+	<!-- Add `node_modules/` to global paths so `require` works properly in development -->
+	<script>
+		require('module').globalPaths.push('<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, `\\\\`) %>')
+	</script>
+	<% } %>
 	<title>Monitor Key Light</title>
-	<link href="/static/style.css" rel="stylesheet">
 </head>
-
 
 <body>
 	<header id="titlebar">
@@ -43,13 +46,18 @@
 			</div>
 		</div>
 	</header>
-	<div id="app"></div>
-	<!-- built files will be auto injected -->
+	<div id="app">
+	</div>
+
+	<!-- Set `__static` path to static files in production -->
+	<% if (!htmlWebpackPlugin.options.isBrowser && !htmlWebpackPlugin.options.isDevelopment) { %>
 	<script>
-		const Store = require('electron-store');
+		window.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 	</script>
-	
-	<script src="static/renderer.js"></script>
+	<% } %>
+
+	<script src="static/titlebar-renderer.js"></script>
+	<!-- webpack builds are automatically injected -->
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <template>
 	<div class="key-color">
 		<transition name="fade">
-			<colour-picker v-show="showAll" v-model="color" />
+			<colour-picker v-show="showAll" v-model="color" :disable-alpha="true" />
 		</transition>
 	</div>
 </template>
@@ -11,17 +11,17 @@ import { Chrome } from "vue-color";
 import { debounce } from "vue-debounce";
 
 export default {
-	name: "KeyLight",
+	name: "key-light",
 	components: {
 		"colour-picker": Chrome
 	},
 	watch: {
 		color: function() {
-			if(!this.color.hex8)
+			if(!this.color.hex)
 				return;
 				
-			document.body.style.backgroundColor = this.color.hex8;
-			this.store.set('color', this.color.hex8);
+			document.body.style.backgroundColor = this.color.hex;
+			this.store.set('color', this.color.hex);
 		}
 	},
 	created() {
@@ -32,7 +32,7 @@ export default {
 	},
 	data() {
 		return {
-			color: "",
+			color: '',
 			showAll: true
 		};
 	},

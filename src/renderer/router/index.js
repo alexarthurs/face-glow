@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import KeyLight from '@/components/KeyLight'
+const Store = require('electron-store');
 
 Vue.use(Router)
 Vue.mixin({
@@ -11,13 +11,16 @@ Vue.mixin({
 	}
 });
 
-
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'KeyLight',
-      component: KeyLight
+      name: 'key-light',
+      component: require('@/components/KeyLight').default
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })
