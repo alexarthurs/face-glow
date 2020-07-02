@@ -15,7 +15,6 @@
 <body>
 	<header id="titlebar">
 		<div id="drag-region">
-
 			<div id="window-title">
 				<span>Monitor Key Light</span>
 			</div>
@@ -42,12 +41,18 @@
 						srcset="static/icons/close-w-10.png 1x, static/icons/close-w-12.png 1.25x, static/icons/close-w-15.png 1.5x, static/icons/close-w-15.png 1.75x, static/icons/close-w-20.png 2x, static/icons/close-w-20.png 2.25x, static/icons/close-w-24.png 2.5x, static/icons/close-w-30.png 3x, static/icons/close-w-30.png 3.5x"
 						draggable="false" />
 				</div>
-
 			</div>
 		</div>
 	</header>
+
 	<div id="app">
 	</div>
+
+	<script>
+		if (process.platform !== "win32") {
+			document.getElementById('titlebar').remove();
+		}
+	</script>
 
 	<!-- Set `__static` path to static files in production -->
 	<% if (!htmlWebpackPlugin.options.isBrowser && !htmlWebpackPlugin.options.isDevelopment) { %>

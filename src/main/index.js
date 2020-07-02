@@ -31,7 +31,7 @@ function createWindow() {
 		height: store.get('height'),
 		x: store.get('x'),
 		y: store.get('y'),
-		frame: false,
+		frame: process.platform !== "win32",
 		backgroundColor: '#000',
 		webPreferences: {
 			nodeIntegration: true,
