@@ -1,6 +1,6 @@
 {
   "name": "face-glow",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Alex Arthurs <info@alexarthurs.com>",
   "description": "FaceGlow transforms your a computer monitor into a virtual key light for webcams, ensuring you look your best during video calls and streams.",
   "license": "MIT",
@@ -18,7 +18,7 @@
   },
   "build": {
     "productName": "face-glow",
-    "appId": "com.example.yourapp",
+    "appId": "com.alexarthurs.face-glow",
     "directories": {
       "output": "build"
     },
