@@ -19,21 +19,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/alexarthurs/monitor-key-light">
-    <img src="static/keylight.jpg" alt="Logo">
+  <a href="https://github.com/alexarthurs/face-glow">
+    <img src="static/icon.png" alt="Logo">
   </a>
 
-  <h3 align="center">Monitor Key Light</h3>
+  <h3 align="center">FaceGlow</h3>
 
   <p align="center">
-    A desktop app that turns your monitor into a key light. 
+    FaceGlow transforms your computer monitor into a virtual key light for webcams, ensuring you look your best during video calls and streams.
     <br />
     <br />
-    <a href="https://github.com/alexarthurs/monitor-key-light/releases">Download Latest Release</a>
+    <a href="https://github.com/alexarthurs/face-glow/releases">Download Latest Release</a>
     ·
-    <a href="https://github.com/alexarthurs/monitor-key-light/issues">Report Bug</a>
+    <a href="https://github.com/alexarthurs/face-glow/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alexarthurs/monitor-key-light/issues">Request Feature</a>
+    <a href="https://github.com/alexarthurs/face-glow/issues">Request Feature</a>
   </p>
 </p>
 
@@ -82,7 +82,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 Alex Arthurs - [Website](https://alexarthurs.com) - info@alexarthurs.com
 
-Project Link: [https://github.com/alexarthurs/monitor-key-light](https://github.com/alexarthurs/monitor-key-light)
+Project Link: [https://github.com/alexarthurs/face-glow](https://github.com/alexarthurs/face-glow)
 
 
 
@@ -94,15 +94,15 @@ Project Link: [https://github.com/alexarthurs/monitor-key-light](https://github.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/alexarthurs/monitor-key-light.svg?style=flat-square
-[contributors-url]: https://github.com/alexarthurs/monitor-key-light/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alexarthurs/monitor-key-light.svg?style=flat-square
-[forks-url]: https://github.com/alexarthurs/monitor-key-light/network/members
-[stars-shield]: https://img.shields.io/github/stars/alexarthurs/monitor-key-light.svg?style=flat-square
-[stars-url]: https://github.com/alexarthurs/monitor-key-light/stargazers
-[issues-shield]: https://img.shields.io/github/issues/alexarthurs/monitor-key-light.svg?style=flat-square
-[issues-url]: https://github.com/alexarthurs/monitor-key-light/issues
-[license-shield]: https://img.shields.io/github/license/alexarthurs/monitor-key-light.svg?style=flat-square
-[license-url]: https://github.com/alexarthurs/monitor-key-light/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/alexarthurs/face-glow.svg?style=flat-square
+[contributors-url]: https://github.com/alexarthurs/face-glow/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alexarthurs/face-glow.svg?style=flat-square
+[forks-url]: https://github.com/alexarthurs/face-glow/network/members
+[stars-shield]: https://img.shields.io/github/stars/alexarthurs/face-glow.svg?style=flat-square
+[stars-url]: https://github.com/alexarthurs/face-glow/stargazers
+[issues-shield]: https://img.shields.io/github/issues/alexarthurs/face-glow.svg?style=flat-square
+[issues-url]: https://github.com/alexarthurs/face-glow/issues
+[license-shield]: https://img.shields.io/github/license/alexarthurs/face-glow.svg?style=flat-square
+[license-url]: https://github.com/alexarthurs/face-glow/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/alex-arthurs-73998660/

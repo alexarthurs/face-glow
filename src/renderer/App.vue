@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name: "monitor-key-light"
+	name: "face-glow"
 };
 </script>
 

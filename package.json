@@ -1,8 +1,8 @@
 {
-  "name": "monitor-key-light",
+  "name": "face-glow",
   "version": "1.0.0",
   "author": "Alex Arthurs <info@alexarthurs.com>",
-  "description": "A desktop app that turns your monitor into a key light.",
+  "description": "FaceGlow transforms your a computer monitor into a virtual key light for webcams, ensuring you look your best during video calls and streams.",
   "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "postinstall": ""
   },
   "build": {
-    "productName": "monitor-key-light",
+    "productName": "face-glow",
     "appId": "com.example.yourapp",
     "directories": {
       "output": "build"
