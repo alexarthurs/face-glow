@@ -1,98 +1,38 @@
 {
-  "name": "face-glow",
-  "version": "1.1.0",
-  "author": "Alex Arthurs <info@alexarthurs.com>",
-  "description": "FaceGlow transforms your a computer monitor into a virtual key light for webcams, ensuring you look your best during video calls and streams.",
-  "license": "MIT",
-  "main": "./dist/electron/main.js",
-  "scripts": {
-    "build": "node .electron-vue/build.js && electron-builder",
-    "build:dir": "node .electron-vue/build.js && electron-builder --dir",
-    "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
-    "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
-    "dev": "node .electron-vue/dev-runner.js",
-    "pack": "npm run pack:main && npm run pack:renderer",
-    "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
-    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
-    "postinstall": ""
-  },
-  "build": {
-    "productName": "face-glow",
-    "appId": "com.alexarthurs.face-glow",
-    "directories": {
-      "output": "build"
-    },
-    "files": [
-      "dist/electron/**/*"
-    ],
-    "dmg": {
-      "contents": [
-        {
-          "x": 410,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
-        },
-        {
-          "x": 130,
-          "y": 150,
-          "type": "file"
-        }
-      ]
-    },
-    "mac": {
-      "icon": "build/icons/icon.icns"
-    },
-    "win": {
-      "icon": "build/icons/icon.ico"
-    },
-    "linux": {
-      "icon": "build/icons"
-    }
-  },
-  "dependencies": {
-    "electron-store": "^5.2.0",
-    "vue": "^2.5.16",
-    "vue-color": "^2.7.1",
-    "vue-debounce": "^2.5.7",
-    "vue-electron": "^1.0.6",
-    "vue-router": "^3.0.1"
-  },
-  "devDependencies": {
-    "ajv": "^6.5.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "cfonts": "^2.1.2",
-    "chalk": "^2.4.1",
-    "copy-webpack-plugin": "^4.5.1",
-    "cross-env": "^5.1.6",
-    "css-loader": "^0.28.11",
-    "del": "^3.0.0",
-    "devtron": "^1.4.0",
-    "electron": "^2.0.4",
-    "electron-debug": "^1.5.0",
-    "electron-devtools-installer": "^2.2.4",
-    "electron-builder": "^23.0.3",
-    "mini-css-extract-plugin": "0.4.0",
-    "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^3.2.0",
-    "multispinner": "^0.2.1",
-    "node-loader": "^0.6.0",
-    "style-loader": "^0.21.0",
-    "url-loader": "^1.0.1",
-    "vue-html-loader": "^1.2.4",
-    "vue-loader": "^15.2.4",
-    "vue-style-loader": "^4.1.0",
-    "vue-template-compiler": "^2.5.16",
-    "webpack-cli": "^3.0.8",
-    "webpack": "^4.15.1",
-    "webpack-dev-server": "^3.1.4",
-    "webpack-hot-middleware": "^2.22.2",
-    "webpack-merge": "^4.1.3"
-  }
+	"name": "face-glow",
+	"version": "1.1.0",
+	"description": "FaceGlow transforms your a computer monitor into a virtual key light for webcams, ensuring you look your best during video calls and streams.",
+	"productName": "FaceGlow",
+	"author": "Alex Arthurs <info@alexarthurs.com>",
+	"private": true,
+	"scripts": {
+		"dev": "quasar dev",
+		"build": "quasar build",
+		"lint": "eslint --ext .js,.ts,.vue ./",
+		"format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+		"test": "echo \"No test specified\" && exit 0"
+	},
+	"dependencies": {
+		"@quasar/extras": "^1.0.0",
+		"quasar": "^2.6.0",
+		"vue": "^3.0.0",
+		"vue-router": "^4.0.0"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.10.0",
+		"@typescript-eslint/parser": "^5.10.0",
+		"eslint": "^8.10.0",
+		"eslint-plugin-vue": "^9.0.0",
+		"eslint-config-prettier": "^8.1.0",
+		"prettier": "^2.5.1",
+		"@types/node": "^12.20.21",
+		"@quasar/app-vite": "^1.0.0",
+		"autoprefixer": "^10.4.2",
+		"typescript": "^4.5.4"
+	},
+	"engines": {
+		"node": "^18 || ^16 || ^14.19",
+		"npm": ">= 6.13.4",
+		"yarn": ">= 1.21.1"
+	}
 }
