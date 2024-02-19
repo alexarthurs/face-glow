@@ -46,22 +46,23 @@ onMounted(async () => {
   });
 });
 
-watch(
-  () => [mouseX.value, mouseY.value],
-  () => {
-    clearTimeout(timeoutId);
-    showColorPicker.value = true;
-    timeoutId = setTimeout(() => {
-      showColorPicker.value = false;
-    }, 2000);
-  },
-  { immediate: true }
-);
-
 window.addEventListener('mousemove', (e) => {
   mouseX.value = e.clientX;
   mouseY.value = e.clientY;
+  resetTimeout();
 });
+
+window.addEventListener('keypress', () => {
+  resetTimeout();
+});
+
+function resetTimeout() {
+  clearTimeout(timeoutId);
+  showColorPicker.value = true;
+  timeoutId = setTimeout(() => {
+    showColorPicker.value = false;
+  }, 2000);
+}
 </script>
 
 <style scoped>
