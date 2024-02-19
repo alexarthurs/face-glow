@@ -1,6 +1,10 @@
 {
   "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
+    "target": "ES2018",
+    "module": "CommonJS",
+    "outDir": "./dist",
     "baseUrl": "."
-  }
+  },
+  "include": ["src-electron/**/*.ts"]
 }
