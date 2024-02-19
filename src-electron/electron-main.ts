@@ -1,4 +1,4 @@
-import { app, BrowserWindow, globalShortcut } from 'electron';
+import { app, BrowserWindow, globalShortcut, ipcMain } from 'electron';
 import path from 'path';
 import os from 'os';
 
@@ -16,6 +16,14 @@ const platform = process.platform || os.platform();
 
 let mainWindow: BrowserWindow | undefined;
 
+ipcMain.handle('get-color', async () => {
+  return store.get('color');
+});
+
+ipcMain.handle('set-color', async (event, newColor) => {
+  store.set('color', newColor);
+});
+
 function createWindow() {
   /**
    * Initial window options
@@ -27,7 +35,7 @@ function createWindow() {
     height: store.get('height'),
     x: store.get('x'),
     y: store.get('y'),
-    backgroundColor: '#5d3fdd',
+    backgroundColor: store.get('color'),
     autoHideMenuBar: true,
     useContentSize: true,
     show: false,

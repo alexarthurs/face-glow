@@ -10,7 +10,6 @@
             v-if="showColorPicker"
             dark
             v-model="color"
-            default-value="#285de0"
             style="max-width: 350px"
           />
         </transition>
@@ -20,20 +19,31 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue';
+declare global {
+  interface Window {
+    electron: any;
+  }
+}
 
-const color = ref('#5d3fdd');
+import { ref, onMounted, watch } from 'vue';
+const { electron } = window;
+
 const showColorPicker = ref(true);
 const mouseX = ref(0);
 const mouseY = ref(0);
 let timeoutId: any;
 
 // onmount
-onMounted(() => {
-  console.log('mounted');
-  timeoutId = setTimeout(() => {
-    showColorPicker.value = false;
-  }, 1000);
+
+const color = ref('');
+
+electron.invoke('get-color').then((newColor: any) => {
+  color.value = newColor;
+});
+onMounted(async () => {
+  watch(color, (newColor) => {
+    electron.invoke('set-color', newColor);
+  });
 });
 
 watch(
@@ -52,7 +62,6 @@ window.addEventListener('mousemove', (e) => {
   mouseX.value = e.clientX;
   mouseY.value = e.clientY;
 });
-
 </script>
 
 <style scoped>
