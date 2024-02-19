@@ -51,8 +51,8 @@ watch(
 window.addEventListener('mousemove', (e) => {
   mouseX.value = e.clientX;
   mouseY.value = e.clientY;
-  console.log(`Mouse moved to: (${e.clientX}, ${e.clientY})`);
 });
+
 </script>
 
 <style scoped>
