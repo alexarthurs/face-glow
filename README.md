@@ -12,8 +12,6 @@
 
 [![MIT License][license-shield]][license-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -35,18 +33,16 @@
   </p>
 </p>
 
-
-
 ## Built With
-* [Electron](https://www.electronjs.org/)
-* [Vue](https://vuejs.org/)
 
-
+- [Electron](https://www.electronjs.org/)
+- [Vue](https://vuejs.org/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -58,6 +54,7 @@ npm run build
 ```
 
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Any contributions you make are **greatly appreciated**.
@@ -68,30 +65,30 @@ Any contributions you make are **greatly appreciated**.
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
+
 ## Contact
+
 Alex Arthurs - [Website](https://alexarthurs.com) - info@alexarthurs.com
 
 Project Link: [https://github.com/alexarthurs/face-glow](https://github.com/alexarthurs/face-glow)
 
-
-
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Vue-Color](https://github.com/xiaokaike/vue-color)
-* [Electron-Store](https://github.com/sindresorhus/electron-store)
 
+## Acknowledgements
+
+- [Vue-Color](https://github.com/xiaokaike/vue-color)
+- [Electron-Store](https://github.com/sindresorhus/electron-store)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/alexarthurs/face-glow.svg?style=flat-square
 [contributors-url]: https://github.com/alexarthurs/face-glow/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/alexarthurs/face-glow.svg?style=flat-square

@@ -1,196 +1,194 @@
-<template>
-	<div id="app">
-		<router-view></router-view>
-	</div>
-</template>
-
-<script>
-export default {
-	name: "face-glow"
-};
+<script setup lang="tsx">
+import { DefaultLayout } from '@/renderer/components/layout'
 </script>
+
+<template>
+  <DefaultLayout>
+    <router-view />
+  </DefaultLayout>
+</template>
 
 <style>
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 html,
 body {
-	height: 100%;
-	margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 body {
-	font-family: "Segoe UI", sans-serif;
-	color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
 }
 
 h1 {
-	margin: 0 0 10px 0;
-	font-weight: 600;
-	line-height: 1.2;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 p {
-	margin-top: 10px;
-	color: rgba(255, 255, 255, 0.4);
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* Styling of window frame and titlebar */
 body {
-	border: 1px solid #48545c;
-	overflow-y: hidden;
+  border: 1px solid #48545c;
+  overflow-y: hidden;
 }
 
 #titlebar {
-	display: block;
-	position: fixed;
-	height: 32px;
-	width: calc(100% - 2px);
+  display: block;
+  position: fixed;
+  height: 32px;
+  width: calc(100% - 2px);
 }
 
 .maximized #titlebar {
-	width: 100%;
-	padding: 0;
+  width: 100%;
+  padding: 0;
 }
 
 #main {
-	height: calc(100% - 32px);
-	margin-top: 32px;
-	padding: 20px;
-	overflow-y: auto;
+  height: calc(100% - 32px);
+  margin-top: 32px;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 #titlebar {
-	padding: 4px;
+  padding: 4px;
 }
 
 #titlebar #drag-region {
-	width: 100%;
-	height: 100%;
-	-webkit-app-region: drag;
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: drag;
 }
 
 #titlebar {
-	color: #fff;
+  color: #fff;
 }
 
 #titlebar #drag-region {
-	display: grid;
-	grid-template-columns: auto 138px;
+  display: grid;
+  grid-template-columns: auto 138px;
 }
 
 #window-title {
-	grid-column: 1;
-	display: flex;
-	align-items: center;
-	margin-left: 8px;
-	overflow: hidden;
-	font-family: "Segoe UI", sans-serif;
-	font-size: 12px;
-	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 12px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .maximized #window-title {
-	margin-left: 12px;
+  margin-left: 12px;
 }
 
 #window-title span {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.5;
 }
 
 #window-controls {
-	display: grid;
-	grid-template-columns: repeat(3, 46px);
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	background-color: #00000020;
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #00000020;
 }
 
 #window-controls {
-	-webkit-app-region: no-drag;
+  -webkit-app-region: no-drag;
 }
 
 #window-controls .button {
-	grid-row: 1 / span 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+  grid-row: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 @media (-webkit-device-pixel-ratio: 1.5),
-	(device-pixel-ratio: 1.5),
-	(-webkit-device-pixel-ratio: 2),
-	(device-pixel-ratio: 2),
-	(-webkit-device-pixel-ratio: 3),
-	(device-pixel-ratio: 3) {
-	#window-controls .icon {
-		width: 10px;
-		height: 10px;
-	}
+  (device-pixel-ratio: 1.5),
+  (-webkit-device-pixel-ratio: 2),
+  (device-pixel-ratio: 2),
+  (-webkit-device-pixel-ratio: 3),
+  (device-pixel-ratio: 3) {
+  #window-controls .icon {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 #window-controls .button {
-	user-select: none;
+  user-select: none;
 }
 
 #window-controls .button:hover {
-	background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 #window-controls .button:active {
-	background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 #close-button:hover {
-	background: #e81123 !important;
+  background: #e81123 !important;
 }
 
 #close-button:active {
-	background: #f1707a !important;
+  background: #f1707a !important;
 }
 #close-button:active .icon {
-	filter: invert(1);
+  filter: invert(1);
 }
 
 #min-button {
-	grid-column: 1;
+  grid-column: 1;
 }
 #max-button,
 #restore-button {
-	grid-column: 2;
+  grid-column: 2;
 }
 #close-button {
-	grid-column: 3;
+  grid-column: 3;
 }
 
 #restore-button {
-	display: none !important;
+  display: none !important;
 }
 
 .maximized #restore-button {
-	display: flex !important;
+  display: flex !important;
 }
 
 .maximized #max-button {
-	display: none;
+  display: none;
 }
 </style>
