@@ -1,42 +1,48 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page
+    class="row items-center justify-evenly"
+    :style="{ backgroundColor: color }"
+  >
+    <div class="key-color">
+      <div class="q-pa-md">
+        <transition name="fade">
+          <q-color
+            dark
+            v-model="color"
+            default-value="#285de0"
+            style="max-width: 350px"
+          />
+        </transition>
+      </div>
+    </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
-const todos = ref<Todo[]>([
-  {
-    id: 1,
-    content: 'ct1'
-  },
-  {
-    id: 2,
-    content: 'ct2'
-  },
-  {
-    id: 3,
-    content: 'ct3'
-  },
-  {
-    id: 4,
-    content: 'ct4'
-  },
-  {
-    id: 5,
-    content: 'ct5'
-  }
-]);
-const meta = ref<Meta>({
-  totalCount: 1200
+const color = ref('#5d3fdd');
+
+// onmount
+onMounted(() => {
+  console.log('mounted');
 });
 </script>
+
+<style scoped>
+.key-color {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

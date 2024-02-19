@@ -13,7 +13,6 @@
 		"test": "echo \"No test specified\" && exit 0"
 	},
 	"dependencies": {
-		"@lk77/vue3-color": "^3.0.6",
 		"@quasar/extras": "^1.0.0",
 		"quasar": "^2.6.0",
 		"vue": "^3.0.0",
